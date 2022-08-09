@@ -1,0 +1,21 @@
+{
+  "name": "chatserver",
+  "version": "1.0.0",
+  "description": "This is a simple chatserver",
+  "scripts": {
+    "test": "telnet localhost 12000",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "chat",
+    "server",
+    "example",
+    "simple"
+  ],
+  "author": "程闽",
+  "license": "MIT",
+  "devDependencies": {
+    "comment-json": "^4.2.2",
+    "typescript": "^4.7.4"
+  }
+}

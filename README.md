@@ -17,3 +17,17 @@ npm start
 ### config
 
 Before start, don't forget to have look on `./project.config.json`, in which the root field expected to be specified in advance, or your server would be annoyed that it cannot find the database.
+
+## npm
+You can type
+```shell
+npm install chatserverexam
+```
+to download this package
+
+## site
+type
+```shell
+telnet cmtheit.com 12000
+```
+to join a deployed instance!

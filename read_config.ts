@@ -1,7 +1,7 @@
 import {readFileSync} from "fs";
 const commentjson = require('comment-json')
 
-const configPath = "/Users/chengmin/code/WebstormProjects/nodestrom/chatserver/project.confjg.json"
+const configPath = "project.config.json"
 let config;
 
 

@@ -2,9 +2,13 @@
 // All config is shown in this path, and none of them can be omitted.
 {
   // the database path, prefix '/' (or '\' on Windows) is allowed, otherwise you shoud give it relative path
-  "dbpath": "/Users/chengmin/code/WebstormProjects/nodestrom/chatserver/zhanghao.txt",
+  "dbpath": "zhanghao.txt",
   // the encoding of iostream
   "encoding": "utf-8",
   // port to listen
-  "port": 12000
+  "port": 12000,
+  // Max connection
+  "maxConnection": 25,
+  // Max number of accounts
+  "maxAccounts": 1000
 }

@@ -8,12 +8,14 @@ let config;
 config = commentjson.parse(readFileSync(configPath, 'utf-8'), null, true).valueOf()
 
 
-const {dbpath, encoding, port} = config
+const {dbpath, encoding, port, maxConnection, maxAccounts} = config
 
 export{
     dbpath,
     encoding,
-    port
+    port,
+    maxConnection,
+    maxAccounts
 }
 
 

@@ -1,6 +1,6 @@
 import {EventEmitter} from "events";
 
-type Err = 'Error' | 'FileOpenError' | 'IdNotLegal' | "IdHaveExists" | "IdNotFound" | "IdActive";
+type Err = 'Error' | 'FileOpenError' | 'IdNotLegal' | "IdHaveExists" | "IdNotFound" | "IdActive" | "MaxAccounts";
 
 const ErrEmitter = new EventEmitter()
 
@@ -50,6 +50,13 @@ function HandleIdActiveError(callback:(id:string, socket) => void){
     ErrEmitter.on("IdActive", callback)
 }
 
+function EmitMaxAccountsError(id: string, socket){
+    EmitErr('MaxAccounts', id, socket)
+}
+function HandleMaxAccountsError(callback:(id:string, socket) => void){
+    ErrEmitter.on("MaxAccounts", callback)
+}
+
 export {
     // ID 不合法，当 用户注册 时可能出现的错误
     EmitIdNotLegal,
@@ -70,4 +77,8 @@ export {
     // Id正在聊天室，当 用户登陆 时可能出现的错误
     EmitIdActiveError,
     HandleIdActiveError,
+
+    // 最大账号数目，当 用户登陆 时可能出现的错误
+    EmitMaxAccountsError,
+    HandleMaxAccountsError,
 }

@@ -1,5 +1,5 @@
-
 # chatServer
+A little chat server developed upon Nodejs and TypeScript
 
 ## description
 This is a simple instance of chat server based on nodejs and typescript.
@@ -17,7 +17,3 @@ npm start
 ### config
 
 Before start, don't forget to have look on `./project.config.json`, in which the root field expected to be specified in advance, or your server would be annoyed that it cannot find the database.
-
-# chatserver
-A little chat server developed upon Nodejs and TypeScript
-

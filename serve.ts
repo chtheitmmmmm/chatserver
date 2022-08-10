@@ -40,7 +40,7 @@ function handleClose(socket: Socket, thisSocket: socketOid){
     return function() {
         if(thisSocket) {
             SystemBroadcast(thisSocket, `${thisSocket.id} 离开本聊天室`)
-            socket.end(`再见！${thisSocket.id}\n`)
+            socket.write(`再见！${thisSocket.id}\n`)
             sockets.splice(sockets.indexOf(thisSocket), 1)
         }else{
             socket.end("再见！\n")

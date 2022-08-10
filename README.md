@@ -18,6 +18,8 @@ npm start
 
 Before start, don't forget to have look on `./project.config.json`, in which the root field expected to be specified in advance, or your server would be annoyed that it cannot find the database.
 
+You need to create a file named 'zhanghao.txt' which is descriped in the above JSON file right under this root.
+
 ## npm
 You can type
 ```shell

@@ -12,11 +12,12 @@ function preChekck() :Boolean {
 // chat now!
 function chatNow(thisSocket: socketOid) {
     const socket = thisSocket.socket
-    SystemBroadcast(thisSocket, `${thisSocket.id} 进入聊天室`)
     SystemMsg(socket, `目前共有${sockets.length}名用户在本聊天室中`)
     SystemMsg(socket, "现在你可以愉快聊天啦！")
     SystemMsg(socket, "如果不能输入中文，不是本系统问题，是输入法问题")
     SystemMsg(socket, "请文明聊天，遵纪守法")
+    SystemBroadcast(thisSocket, `${thisSocket.id} 进入聊天室`)
+
 }
 
 // 系统广播

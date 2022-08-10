@@ -11,7 +11,7 @@ const msg_1 = require("./msg");
 const com_1 = require("./com");
 let C;
 //# tsignore
-const chalk = import('chalk').then((module) => {
+const chalk = Promise.resolve().then(() => require('chalk')).then((module) => {
     C = new module.Chalk();
 });
 exports.sockets = [];

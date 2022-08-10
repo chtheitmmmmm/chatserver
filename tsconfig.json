@@ -1,10 +1,11 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "target": "es5",
+    "target": "es2015",
     "sourceMap": true
   },
   "exclude": [
-    "../node_modules"
+    "node_modules",
+    "init.ts"
   ]
 }

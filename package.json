@@ -1,6 +1,6 @@
 {
   "name": "chatserverexam",
-  "version": "2.0.3",
+  "version": "2.1.0",
   "description": "This is a simple chatserver",
   "scripts": {
     "test": "telnet localhost 12000",
@@ -15,7 +15,10 @@
   "author": "程闽",
   "license": "MIT",
   "devDependencies": {
-    "comment-json": "^4.2.2",
     "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "chalk": "^5.0.1",
+    "comment-json": "^4.2.2"
   }
 }

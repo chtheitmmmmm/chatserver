@@ -1,6 +1,5 @@
 import {EventEmitter} from "events";
-
-type Suc = "Success" | "WriteDbSuccess" | "LoginSuccess";
+import {Suc, socketOid} from "./types";
 
 const SucEmitter = new EventEmitter()
 
@@ -8,21 +7,22 @@ function EmitSuc(suc: Suc, ...args){
     SucEmitter.emit(suc, ...args)
 }
 
-function EmitWriteDbSucess(filePath: string, id: string, socket){
+function EmitWriteDbSucess(filePath: string, id: string, socket: socketOid){
     EmitSuc('WriteDbSuccess', filePath, id, socket)
 }
-function HandleWriteDbSuccess(callback:(path:string, id:string, socket) => void){
+function HandleWriteDbSuccess(callback:(path:string, id:string, socket: socketOid) => void){
     SucEmitter.on("WriteDbSuccess", callback)
 }
 
 function EmitLoginSuccess(id:string, socket){
     EmitSuc("LoginSuccess", id, socket)
 }
-function HandleLoginSuccess(callback: (id: string, socket, thisSocket) => void){
+function HandleLoginSuccess(callback: (id: string, thisSocket: socketOid) => void){
     SucEmitter.on("LoginSuccess", callback)
 }
 
 export {
+    socketOid,
     EmitWriteDbSucess,
     HandleWriteDbSuccess,
     EmitLoginSuccess,

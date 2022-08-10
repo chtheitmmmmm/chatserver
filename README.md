@@ -15,10 +15,25 @@ To start the server, type:
 npm start
 ```
 ### config
+Open `project.config.json' to configuration.
 
-Before start, don't forget to have look on `./project.config.json`, in which the root field expected to be specified in advance, or your server would be annoyed that it cannot find the database.
-
-You need to create a file named 'zhanghao.txt' which is descriped in the above JSON file right under this root.
+Don't be overwhelming about the IDE's error storm of the below comments in JSON.
+```json
+// Please save this file in utf-8 encoding, or do not type Chinese or other unicode charctor.
+// All config is shown in this path, and none of them can be omitted.
+{
+  // the database path, prefix '/' (or '\' on Windows) is allowed, otherwise you shoud give it relative path
+  "dbpath": "zhanghao.txt",
+  // the encoding of iostream
+  "encoding": "utf-8",
+  // port to listen
+  "port": 12000,
+  // Max connection
+  "maxConnection": 25,
+  // Max number of accounts
+  "maxAccounts": 1000
+}
+```
 
 ## npm
 You can type
